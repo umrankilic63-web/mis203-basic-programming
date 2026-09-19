@@ -3,8 +3,8 @@
 ## Student Information
 
 - Name: Ümran Kılıç
-- Student Number: 2404109051
 - Department: Management Information Systems
+- Age: 19
 - Career Goal: Data Analyst
 
 ## AI Tool Used
