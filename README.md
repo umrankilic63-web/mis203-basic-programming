@@ -1,12 +1,10 @@
-# MIS203 Basic Programming
+ # MIS203 Basic Programming
 
 ## Student Information
 
 - Name: Ümran Kılıç
-
--Student Number : 240109051
+- Student Number: 2404109051
 - Department: Management Information Systems
-- Age: 19
 - Career Goal: Data Analyst
 
 ## AI Tool Used
