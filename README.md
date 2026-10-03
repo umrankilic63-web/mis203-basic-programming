@@ -26,3 +26,18 @@
 **What did you change?** I changed the code to keep track of the total number of students and their scores. I also tested the program with different scores.
 
 **What does break do in your program?** The break statement stops the loop when the user enters q.
+
+## Week 03
+
+- **AI Tool Used:** ChatGPT
+
+- **Prompt Used:** Create a Python cinema ticket office program that asks for customer name, age, day, and student status. Validate age, day, and student input, apply the specified ticket pricing rules in order, print each ticket result with two decimal places, and print a summary of tickets sold, total revenue, average price, and free tickets.
+
+- **What did you change?** I changed the code step by step and tested the program with different ages, days, and student answers. I also checked boundary ages to make sure the discount rules work correctly.
+
+- **Tests:**
+  1. Input: Age 65, weekday, not a student → Result: 100.00 TRY (Senior)
+  2. Input: Age 12, weekend, student → Result: 150.00 TRY (Child)
+  3. Input: Age 20, weekday, student → Result: 140.00 TRY (Student)
+
+- **Why does the order of the rules matter?** The program applies only the first matching rule. For example, a 10-year-old student must get the Child discount, so the Child rule must come before the Student rule.
