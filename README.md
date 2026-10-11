@@ -41,3 +41,39 @@
   3. Input: Age 20, weekday, student → Result: 140.00 TRY (Student)
 
 - **Why does the order of the rules matter?** The program applies only the first matching rule. For example, a 10-year-old student must get the Child discount, so the Child rule must come before the Student rule.
+
+- # Week04
+
+## Discover Your Hidden Personality ✨
+
+### About the Project
+Discover Your Hidden Personality is a simple Python quiz that helps users discover their personality type by answering four questions.
+
+At the end of the quiz, the program shows a personality type based on the user's answers.
+
+### Personality Types
+- **The Sunshine:** Happy and energetic.
+- **The Dreamer:** Creative and imaginative.
+- **The Mystery:** Curious and interested in secrets.
+- **The Thinker:** Calm and logical.
+
+### Libraries Used
+- `random`: Imported for random choices.
+- `time`: Used to add a short waiting effect before showing the result.
+
+### Python Concepts
+- Variables
+- If, elif, and else statements
+- For loops
+- User input and print statements
+
+### How to Run
+1. Open `personality_test.py`.
+2. Run the Python file.
+3. Answer the four questions by entering a number from 1 to 4.
+4. Discover your hidden personality!
+
+### Purpose
+The purpose of this project is to practice basic Python concepts while creating a fun and interactive quiz.
+
+**Thank you for playing!** 
