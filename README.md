@@ -77,3 +77,13 @@ At the end of the quiz, the program shows a personality type based on the user's
 The purpose of this project is to practice basic Python concepts while creating a fun and interactive quiz.
 
 **Thank you for playing!** 
+
+# Lab 04 - Savings Planner
+
+This program simulates monthly savings with interest and deposits.
+
+**Test:** Starting balance 1000, monthly deposit 500, interest rate 1%, goal 3000.
+
+**Result:** The goal was reached in 4 months with a final balance of 3070.80.
+
+**Change after testing:** Added input validation to reject negative balances and interest rates, and non-positive deposits and goals.
