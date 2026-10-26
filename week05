@@ -1,1 +1,74 @@
 
+"""Week 5 lab: reusable shipping quote calculator."""
+
+FREE_SHIPPING_THRESHOLD = 100.00
+STANDARD_SHIPPING_FEE = 8.00
+DISCOUNT_THRESHOLD = 150.00
+DISCOUNT_RATE = 0.10
+
+
+def calculate_subtotal(items):
+    """Return the total price of all items."""
+    subtotal = 0.0
+    for quantity, unit_price in items:
+        subtotal += quantity * unit_price
+    return round(subtotal, 2)
+
+
+def calculate_discount_rate(subtotal):
+    """Return the discount rate."""
+    if subtotal >= DISCOUNT_THRESHOLD:
+        return DISCOUNT_RATE
+    return 0.0
+
+
+def calculate_shipping_fee(subtotal):
+    """Return the shipping fee."""
+    if subtotal >= FREE_SHIPPING_THRESHOLD:
+        return 0.0
+    return STANDARD_SHIPPING_FEE
+
+
+def calculate_final_total(subtotal, discount_rate, shipping_fee):
+    """Return the final price after discount and shipping."""
+    discount = subtotal * discount_rate
+    return round(subtotal - discount + shipping_fee, 2)
+
+
+def quote_order(order_name, items):
+    """Calculate and display one order's quote."""
+    subtotal = calculate_subtotal(items)
+    discount_rate = calculate_discount_rate(subtotal)
+    shipping_fee = calculate_shipping_fee(subtotal)
+    total = calculate_final_total(
+        subtotal, discount_rate, shipping_fee
+    )
+
+    print(f"Order: {order_name}")
+    print(f"Subtotal:      {subtotal:.2f} TRY")
+    print(f"Discount rate: {discount_rate:.0%}")
+    print(f"Shipping fee:  {shipping_fee:.2f} TRY")
+    print(f"Final total:   {total:.2f} TRY")
+    print()
+
+    return total
+
+
+def run_tests():
+    """Check calculations, including threshold boundaries."""
+    assert calculate_subtotal([(2, 10.00), (1, 5.50)]) == 25.50
+    assert calculate_shipping_fee(100.00) == 0.0
+    assert calculate_shipping_fee(99.99) == 8.00
+    assert calculate_discount_rate(150.00) == 0.10
+    assert calculate_final_total(100.00, 0.10, 0.00) == 90.00
+
+
+if __name__ == "__main__":
+    run_tests()
+
+    print("Shipping Quote Calculator")
+    print("Free shipping from 100 TRY; 10% discount from 150 TRY.")
+    print()
+
+    quote_order("Sample order 1", [(2, 20.00), (1, 15.00)])
+    quote_order("Sample order 2", [(2, 80.00), (1, 25.00)])
